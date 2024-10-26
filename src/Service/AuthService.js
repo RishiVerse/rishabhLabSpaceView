@@ -16,7 +16,7 @@ export const getToken = () => localStorage.getItem("token");
 export const saveLoggedUser = (username) =>
   sessionStorage.setItem("authenticatedUser", username);
 
-export const testapi = () => axios.get("http://3.109.211.182:8080/user");
+export const testapi = () => axios.get("https://3.109.211.182:8080/user");
 
 //! check if user is logged in
 

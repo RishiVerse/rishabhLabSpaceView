@@ -21,25 +21,25 @@ function Login() {
     // const log = { usernameOrEmail, password };
     testapi().then((response) => console.log(response.data));
 
-    login(usernameOrEmail, password)
-      .then((response) => {
-        const token = window.btoa(`${usernameOrEmail}:${password}`);
+    // login(usernameOrEmail, password)
+    //   .then((response) => {
+    //     const token = window.btoa(`${usernameOrEmail}:${password}`);
 
-        storeToken(token);
-        sessionStorage.setItem("LoggedIn", "true");
+    //     storeToken(token);
+    //     sessionStorage.setItem("LoggedIn", "true");
 
-        saveLoggedUser(usernameOrEmail);
+    //     saveLoggedUser(usernameOrEmail);
 
-        setErrorMessage("Sign in successsful");
-        setUsers({ usernameOrEmail, password });
-        console.log(users.usernameOrEmail + "  " + users.password);
-        navigation("/homepage");
-      })
-      .catch((error) => {
-        console.error(error);
+    //     setErrorMessage("Sign in successsful");
+    //     setUsers({ usernameOrEmail, password });
+    //     console.log(users.usernameOrEmail + "  " + users.password);
+    //     navigation("/homepage");
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
 
-        setErrorMessage("wrong email or password");
-      });
+    //     setErrorMessage("wrong email or password");
+    //   });
   }
   const handleOnChnage = () => {
     setErrorMessage("");
