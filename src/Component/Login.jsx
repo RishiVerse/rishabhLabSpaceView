@@ -1,5 +1,10 @@
 import React, { useState, useContext } from "react";
-import { login, storeToken, saveLoggedUser } from "../Service/AuthService.js";
+import {
+  login,
+  storeToken,
+  saveLoggedUser,
+  testapi,
+} from "../Service/AuthService.js";
 import UserContext from "../Context/UserContext.js";
 import { useNavigate } from "react-router-dom";
 
@@ -14,11 +19,12 @@ function Login() {
     e.preventDefault();
 
     // const log = { usernameOrEmail, password };
+    testapi().then((response) => console.log(response.data));
 
     login(usernameOrEmail, password)
       .then((response) => {
         const token = window.btoa(`${usernameOrEmail}:${password}`);
-         
+
         storeToken(token);
         sessionStorage.setItem("LoggedIn", "true");
 
