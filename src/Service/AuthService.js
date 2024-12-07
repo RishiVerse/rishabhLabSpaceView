@@ -16,8 +16,7 @@ export const getToken = () => localStorage.getItem("token");
 export const saveLoggedUser = (username) =>
   sessionStorage.setItem("authenticatedUser", username);
 
-export const testapi = () =>
-  axios.get("http://ec2-65-2-6-101.ap-south-1.compute.amazonaws.com:8080/user");
+export const testapi = () => axios.get("https://ec2-13-200-217-3.ap-south-1.compute.amazonaws.com/user");
 
 //! check if user is logged in
 
