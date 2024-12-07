@@ -18,7 +18,7 @@ export const saveLoggedUser = (username) =>
 
 export const testapi = () =>
   axios.get(
-    "https://ec2-13-200-217-3.ap-south-1.compute.amazonaws.com:443/user"
+    "http://ec2-13-201-242-34.ap-south-1.compute.amazonaws.com:8080/user"
   );
 
 //! check if user is logged in
